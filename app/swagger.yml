@@ -1,0 +1,30 @@
+# Must specifiy the open api version
+openapi: 3.0.0
+
+# Basically meta data
+info:
+  title: "Surf Report REST API"
+  description: "API about surf conditions"
+  # Version of this application
+  version: "1.0.0"
+
+# root for endpoints
+servers:
+  - url: "/api"
+    description: blah blah blah
+ 
+# endpoints
+paths:
+  /reports:
+    # method endpoint responds too
+    get:
+      # function that is called in response to get request
+      operationId: "home.report.read_all"
+      tags:
+        - "Report"
+      # UI display text
+      summary: "Read the list of surf reports"
+      # Possible responses from end point
+      responses:
+        "200":
+          description: "Successfully read all reports"
